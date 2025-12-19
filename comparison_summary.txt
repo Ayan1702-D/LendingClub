@@ -1,0 +1,49 @@
+
+================================================================================
+LENDINGCLUB - ACCEPTED vs REJECTED ANOMALIES COMPARISON
+Generated: 2025-12-17 11:28:51
+================================================================================
+
+DATASET COMPARISON:
+• Accepted Loans: 2,260,639 applications (5.0% anomalies)
+• Rejected Loans: 2,193,453 applications (5.0% anomalies)
+• Time Period: 2007-06-01 to 2018-12-01 (both datasets)
+
+KEY DIFFERENCES IN ANOMALIES:
+
+1.  DTI VALUES (CRITICAL FINDING):
+   • Rejected Anomalies: 59.0% have DTI > 100 (IMPOSSIBLE VALUES)
+   • Accepted Anomalies: DTI capped at 100 during preprocessing
+   • IMPLICATION: Data quality issues or fraud in rejected applications
+
+2.  LOAN AMOUNTS:
+   • Rejected Anomalies: $23,928 average (1.9x higher than normal rejected)
+   • Accepted Anomalies: $22,031 average (1.5x higher than normal accepted)
+   • IMPLICATION: Anomalies request larger loans in both groups
+
+3.  EMPLOYMENT:
+   • Rejected Anomalies: 61.1% have <1 year employment
+   • Accepted Anomalies: Employment data shows varied patterns
+   • IMPLICATION: Short employment history leads to rejection
+
+4.  INCOME DATA:
+   • Rejected Anomalies: Income data not available in dataset
+   • Accepted Anomalies: $136,011 average (1.8x higher than normal)
+   • IMPLICATION: High-income anomalies get accepted
+
+BUSINESS ASSESSMENT:
+ CREDIT SYSTEM IS WORKING: Correctly rejects impossible DTI applications
+ DATA QUALITY ISSUE: DTI > 100 in rejected applications needs investigation
+ ANOMALY DETECTION VALUE: Identifies edge cases for manual review
+
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Audit rejected applications with DTI > 100 (potential fraud)
+2. SHORT-TERM: Implement DTI validation at application entry point
+3. MEDIUM-TERM: Review employment criteria (may be too conservative)
+4. LONG-TERM: Integrate anomaly detection into decision workflow
+
+NEXT STEPS:
+• Investigate root cause of DTI > 100 in rejected applications
+• Compare anomaly patterns with actual fraud cases
+• Implement real-time anomaly scoring in production
+================================================================================

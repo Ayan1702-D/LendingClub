@@ -1,0 +1,45 @@
+
+================================================================================
+LENDINGCLUB - ACCEPTED LOANS ANOMALY DETECTION
+EXECUTIVE SUMMARY
+Generated: 2025-12-17 10:35:25
+================================================================================
+
+EXECUTIVE HIGHLIGHTS:
+  29.7% of anomalies are LOW FICO applicants (traditional credit risk)
+  16.9% of anomalies have HIGH PUBLIC RECORDS (bankruptcy/legal issues)
+  23.9% of anomalies are HIGH INCOME/HIGH LOAN applicants (potential fraud)
+  29.5% of anomalies show complex patterns requiring investigation
+
+BUSINESS IMPACT:
+• 5% of loans flagged as anomalous
+• Anomalies have 1.42x higher default rate (17.8% vs 12.6%)
+• Captured 9.9% of total bad loan dollars ($448M)
+• High Public Records segment has highest risk concentration
+
+KEY RISK SEGMENTS:
+1. HIGH PUBLIC RECORDS (16.9% of anomalies)
+   • Bankruptcy flags and legal issues
+   • Highest correlation with anomalies
+   • Requires manual review
+
+2. HIGH INCOME/HIGH LOAN (23.9% of anomalies)
+   • Average income: $136K vs normal: $75K
+   • Average loan: $22K vs normal: $14K
+   • Potential income verification issues
+
+3. LOW FICO (29.7% of anomalies)
+   • Already identified by credit scoring
+   • May indicate deteriorating credit
+
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Review all HIGH PUBLIC RECORDS anomalies
+2. PRIORITY: Verify income for HIGH INCOME/HIGH LOAN anomalies  
+3. MONITOR: Track performance of LOW FICO anomalies
+4. INVESTIGATE: Analyze OTHER ANOMALY segment for new patterns
+
+NEXT PHASE:
+• Compare with rejected loans anomaly patterns
+• Implement real-time anomaly detection
+• Refine with supervised learning on outcomes
+================================================================================
